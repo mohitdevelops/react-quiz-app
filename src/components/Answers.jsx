@@ -23,7 +23,11 @@ function Answers({ answers, selectedAnswer, isAnswerSelected, onSelect }) {
 				}
 				return (
 					<li key={answer} className="answer">
-						<button onClick={() => onSelect(answer)} className={answerClass}>
+						<button
+							onClick={() => onSelect(answer)}
+							className={answerClass}
+							disabled={isAnswerSelected !== ""}
+						>
 							{answer}
 						</button>
 					</li>
